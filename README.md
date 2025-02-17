@@ -16,6 +16,7 @@ Asynchronous Python web service
 🦭💬 The API does not support the await function ( return as dictionary and not necessary too ) since they are responses in real-time and asynchronous is implemented for client invoke web services methods. The leading of the group is the target and the second is navigate where we input the parameter the target is answered with information and data extraction to consume and route our robot to the correct order destination. </br>
 
 🐯💬 Culture-INFO, an asynchronous method should have the key to identify the same message communication trails because of other network performance required to use to same information, not including intellective intelligence routing. </br>
+🦁💬 That is the concept of UUID where it can be any number or series present of network stream that can be used among devices to prevent pattern recognitions and information leaks or they can help networks equipments to categorized of the message priority </br>  
 ```
 # src/server.py
 from sanic import Sanic, text # if you don't have sanic, just pip install sanic 
