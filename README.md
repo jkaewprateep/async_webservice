@@ -54,14 +54,16 @@ async def on_post(self, req, resp, symbol, side, qty, price, type, robotname, ta
             current_isverified = listof_isverified[idx_robotname];
             
             if not current_isverified :
-                str_message = dumps('{ "message" : "need to be verified {robotname}" }'.replace("{robotname}", robotname))
+                str_message = dumps('{ "message" : "need to be verified {robotname}" }'.replace("{robotname}",
+                        robotname))
                 resp.text = str_message;
                 resp.data = str_message;
                 return
 
             pass;
         else :
-            str_message = dumps('{ "message" : "error: not found robotname {robotname}" }'.replace("{robotname}", robotname))
+            str_message = dumps('{ "message" : "error: not found robotname {robotname}" }'.replace("{robotname}",
+                        robotname))
             resp.text = str_message;
             resp.data = str_message;
             return
@@ -87,8 +89,8 @@ async def on_post(self, req, resp, symbol, side, qty, price, type, robotname, ta
 
         ### logics
         if amount < _targetamount :
-            str_message = dumps('{ "message" : "{amount} amount is not enough and currently has {current}" }'.replace('{amount}',
-                str(_targetamount)).replace('{current}', str(amount)))
+            str_message = dumps('{ "message" : "{amount} amount is not enough and currently has {current}" }'
+                .replace('{amount}', str(_targetamount)).replace('{current}', str(amount)))
             resp.text = str_message;
             resp.data = str_message;
             return;
