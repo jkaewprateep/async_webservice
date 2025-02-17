@@ -13,7 +13,7 @@ Asynchronous Python web service
 🧸💬 Communication allows time to invoke execution when the first design allows time taken process into web service but we found some issues when increasing thought to the synchronous method request-response from different threads reply on the same treads but the product application support insists not their application mistake then we try to disable caches and moving to async-process. Work experience with synchronized processes never had this problem but we do it parallel to the application support working on the case. </br>
 🐑💬 ➰ The API is registered by multiple threads of working web service methods and we discovered that working with the asynchronize method does not find the same issue or they are different web service APIs, we use SANIC for this time. We create application routing points and separate code files as security concerns one romance we put into the separate code files is they include as less API or components as routing files by separate database service and API service as well. </br>
 
-
+🦭💬 The API does not support the await function ( return as dictionary and not necessary too ) since they are responses in real-time and asynchronous is implemented for client invoke web services methods. The leading of the group is the target and the second is navigate where we input the parameter the target is answered with information and data extraction to consume and route our robot to the correct order destination. </br>
 ```
 # src/server.py
 from sanic import Sanic, text # if you don't have sanic, just pip install sanic 
