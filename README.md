@@ -17,20 +17,15 @@ Asynchronous Python web service
 🦭💬 The leading of the group is the target and the second is navigate where we input the parameter the target is answered with information and data extraction to consume and route our robot to the correct order destination. </br>
 
 🐯💬 Culture-INFO, an asynchronous method should have the key to identify the same message communication trails because of other network performance required to use to same information, not including intellective intelligence routing. </br>
-🦁💬 That is the concept of UUID where it can be any number or series present of network stream that can be used among devices to prevent pattern recognitions and information leaks or they can help networks equipments to categorized of the message priority </br>  
+🦁💬 That is the concept of UUID where it can be any number or series present of network stream that can be used among devices to prevent pattern recognitions and information leaks or they can help network equipment to categorize the message priority </br>  
+
+## Codings example
+🐐💬 Routing page that saved several import libraries but routed to multiple websites in the endpoints, since there is no shared variable by replace of text library or print function will not see anything important or they may not extract information from the class of end-points not easy ( see only its input or empty information ). External - internal function locked. </br> 
 ```
 # src/server.py
-from sanic import Sanic, text # if you don't have sanic, just pip install sanic 
+from sanic import Sanic, text
 
-import time
 import asyncio
-import json
-import alpaca_trade_api as tradeapi
-#
-from bson.json_util import dumps;
-
-# from order_endpoint import get_order_by_client_order_id_route;
-# from order_endpoint import createorder_route;
 
 import order_endpoint;
 import order_endpoint2;
