@@ -10,7 +10,9 @@ Asynchronous Python web service
     <b> ( Picture from Internet ) </b> </br>
 </p>
 
-🧸💬 Communication allows time to invoke execution when the first design allows time taken process into web service but we found some issues when increasing thought to the synchronous method request-response from different threads reply on the same treads but the product application support insists not their application mistake then we try to disable caches and moving to async-process. Work experience with synchronized processes never had this problem but we do it in parallel of the application support working on the case. </br>
+🧸💬 Communication allows time to invoke execution when the first design allows time taken process into web service but we found some issues when increasing thought to the synchronous method request-response from different threads reply on the same treads but the product application support insists not their application mistake then we try to disable caches and moving to async-process. Work experience with synchronized processes never had this problem but we do it parallel to the application support working on the case. </br>
+🐑💬 ➰ The API is registered by multiple threads of working web service methods and we discovered that working with the asynchronize method does not find the same issue or they are different web service APIs, we use SANIC for this time. We create application routing points and separate code files as security concerns one romance we put into the separate code files is they include as less API or components as routing files by separate database service and API service as well. </br>
+
 
 ```
 # src/server.py
@@ -44,40 +46,6 @@ new_ordermodel2.get_order_by_order_id_route(app)
 new_ordermodel2.updatetakeprofit_route(app)
 new_ordermodel3.updateorderqty_route(app)
 new_ordermodellimit.createorderlimit_route(app)
-
-
-async def async_wait_task():
-    print("Start async wait_task")
-    await asyncio.sleep(1)  # Non-blocking, event loop is free to run other tasks
-    print("Finish async wait_task")
-
-
-def wait_task():
-    print("Start wait_task")
-    time.sleep(1)  # blocking task
-    print("Finish wait_task")
-
-
-@app.get("/task")
-def task(request):
-    wait_task()
-    # request.query_string
-    return text(request.query_string )
-
-@app.post("/task2")
-async def task2(request):
-    wait_task()
-    data = request.query_string
-    # data = request.json
-
-    return text( )
-
-
-@app.get("/async_task")
-async def async_task(request):
-    await asyncio.sleep(1)
-    return text("")
-
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8000)
