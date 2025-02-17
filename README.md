@@ -49,7 +49,8 @@ new_ordermodellimit.createorderlimit_route(app)
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8000)
 ```
-
+👧💬 🎈 In the class of execution you can create a program and import more libraries for work specifications, the ```re``` library is my favorite because of it is common to input for none-SQL databases too and shared among functions is only a text string, and saved to create small handling function that use one or twice. <br>
+👧💬 🎈 You still see some split functions that may because of the time escape and it can transform into regular expression ```re``` for standardization.<br>
 ```
 import os;
 import re;
