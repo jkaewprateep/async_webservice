@@ -87,7 +87,8 @@ async def on_post(self, req, resp, symbol, side, qty, price, type, robotname, ta
 
         ### logics
         if amount < _targetamount :
-            str_message = dumps('{ "message" : "{amount} amount is not enough and currently has {current}" }'.replace('{amount}', str(_targetamount)).replace('{current}', str(amount)))
+            str_message = dumps('{ "message" : "{amount} amount is not enough and currently has {current}" }'.replace('{amount}',
+                str(_targetamount)).replace('{current}', str(amount)))
             resp.text = str_message;
             resp.data = str_message;
             return;
@@ -136,7 +137,8 @@ async def on_post(self, req, resp, symbol, side, qty, price, type, robotname, ta
                 _password = listof_result["password"];
                 _amount = new_amount;
                 requester = "system admin"
-                listof_result = json.loads(dumps(self.mongoDB.insert_robotstoDB(_robotname, _accountname, _username, _password, _amount, requester)));
+                listof_result = json.loads(dumps(self.mongoDB.insert_robotstoDB(_robotname, _accountname, _username,
+                    _password, _amount, requester)));
             elif side == "sell" :
                 new_amount = amount + (_currentprice * float(qty));            
                 _robotname = robotname;
@@ -145,7 +147,8 @@ async def on_post(self, req, resp, symbol, side, qty, price, type, robotname, ta
                 _password = listof_result["password"];
                 _amount = new_amount;
                 requester = "system admin"
-                listof_result = json.loads(dumps(self.mongoDB.insert_robotstoDB(_robotname, _accountname, _username, _password, _amount, requester)));
+                listof_result = json.loads(dumps(self.mongoDB.insert_robotstoDB(_robotname, _accountname, _username,
+                    _password, _amount, requester)));
             ###
 
 
@@ -158,7 +161,8 @@ async def on_post(self, req, resp, symbol, side, qty, price, type, robotname, ta
             client_order_id = _temp["client_order_id"];
             status = _temp["status"];
 
-            result = self.mongoDB.insert_orderstoDB( symbol, side, qty, price, robotname, unique_id, order_id, requester, price, stop_price, status );
+            result = self.mongoDB.insert_orderstoDB( symbol, side, qty, price, robotname, unique_id, order_id,
+                    requester, price, stop_price, status );
             str_message = dumps(_temp);
             resp.text = str_message;
             resp.data = str_message;
