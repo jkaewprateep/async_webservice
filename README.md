@@ -10,6 +10,8 @@ Asynchronous Python web service
     <b> ( Picture from Internet ) </b> </br>
 </p>
 
+🧸💬 Communication allows time to invoke execution when the first design allows time taken process into web service but we found some issues when increasing thought to the synchronous method request-response from different threads reply on the same treads but the product application support insists not their application mistake then we try to disable caches and moving to async-process. Work experience with synchronized processes never had this problem but we do it in parallel of the application support working on the case. </br>
+
 ```
 # src/server.py
 from sanic import Sanic, text # if you don't have sanic, just pip install sanic 
